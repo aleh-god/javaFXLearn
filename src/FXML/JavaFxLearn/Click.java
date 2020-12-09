@@ -1,4 +1,4 @@
-package JavaFxLearn;
+package FXML.JavaFxLearn;
 import javafx.application.Application;
         import javafx.stage.Stage;
         import javafx.scene.Scene;
@@ -20,8 +20,13 @@ public class Click extends Application{
         Button btn = new Button();
         btn.setText("Click!");
 
+        //При нажатии на кнопку, создается объект Event, через который передается информация о событии.
+        //В данном случае при нажатии на кнопку будет генерироваться событие типа javafx.event.ActionEvent (который наследуется от Event).
+        //Для определения обработчика события используется функциональный интерфейс EventHandler.
+
         btn.setOnAction(new EventHandler<ActionEvent>() {
 
+            //В методе handle определяются действия, которые будут вызываться при нажатии на кнопку
             @Override
             public void handle(ActionEvent event) {
 
